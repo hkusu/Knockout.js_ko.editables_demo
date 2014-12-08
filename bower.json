@@ -1,0 +1,9 @@
+{
+  "name": "knockout-app",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "knockoutjs": "~3.2.0",
+    "knockout-editables": "*"
+  }
+}
