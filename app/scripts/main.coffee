@@ -1,29 +1,29 @@
 $ ->
 
-  HogeViewModel = (name, age) ->
+  HogeViewModel = (name, power) ->
 
     # トランザクション開始用の内部関数
     begin_edit = ->
       self.name.beginEdit()
-      self.age.beginEdit()
+      self.power.beginEdit()
       return
 
     # コミット用の内部関数
     commit = ->
       self.name.commit()
-      self.age.commit()
+      self.power.commit()
       return
 
     # ロールバック用の内部関数
     rollback = ->
       self.name.rollback()
-      self.age.rollback()
+      self.power.rollback()
       return
 
     # ViewModel のオブジェクト本体
     self =
       name: ko.observable(name) # 変数「name」を監視対象へ
-      age: ko.observable(age)   # 変数「age」を監視対象へ
+      power: ko.observable(power)   # 変数「power」を監視対象へ
       cancel: -> # 「元に戻す」ボタンが押下された際のアクション
         rollback()   # ロールバック
         begin_edit() # 再度トランザクションを開始
@@ -43,6 +43,6 @@ $ ->
 
   # View へ ViewModel をバインド
   if $("#main")[0]
-    ko.applyBindings HogeViewModel("山田", 32), $("#main")[0]
+    ko.applyBindings HogeViewModel("山田", 53), $("#main")[0]
 
   return

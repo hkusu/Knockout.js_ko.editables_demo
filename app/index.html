@@ -26,10 +26,10 @@
       <div id="main">
         <div class = "form-group" style="line-height: 40px">
           名前：<input class="form-control" data-bind="textInput: name">
-          年齢：<input class="form-control" data-bind="textInput: age">
+          年齢：<input class="form-control" data-bind="textInput: power">
         </div>
         <p style="color: goldenrod">
-          <span data-bind="text: name"></span>さん <span data-bind="text: age"></span> 歳ですね。
+          <span data-bind="text: name"></span> の戦闘力は <span data-bind="text: power"></span> 万です。
         </p>
         <button class='btn btn-primary' data-bind='click: cancel'>元に戻す</button>
         <button class='btn btn-primary' data-bind='click: save'>保存する</button>
